@@ -12,7 +12,7 @@ typedef struct data { //인기가 있는 컴퓨터 언어 순으로 우선순위를 매김
 	data* next;
 }D;
 
-class listpriorityqueue {
+class listpriorityqueue { //연결리스트로 구현한 우선순위 큐(큐이므로, 우선순위가 높으면 먼저 나오지만, 우선순위가 같으면 선입선출의 형식을 따름)
 public:
 	listpriorityqueue() {
 		head = NULL;
@@ -22,6 +22,9 @@ public:
 	void add(string input, int p); //연결리스트 우선순위 큐에 하나의 원소를 삽입
 	string remove(); //가장 우선순위가 높은 연결리스트의 데이터를 반환하고 노드 삭제
 	bool isEmpty(); //연결리스트가 비어있나 확인
+	int searchpopular() {
+		return head->popularity;
+	}
 	int getsize() {
 		return size;
 	}

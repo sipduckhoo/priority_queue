@@ -25,10 +25,6 @@ void listpriorityqueue::add(string input, int p) {
 		D* tmp2 = NULL;
 		
 		while (tmp1->popularity >= insert->popularity) {
-			if (tmp1->comp_lang == insert->comp_lang) {
-				cout << "Some node`s data is same with this." << endl;
-				return;
-			}
 			tmp2 = tmp1;
 			if (tmp1->next != NULL)
 				tmp1 = tmp1->next;
